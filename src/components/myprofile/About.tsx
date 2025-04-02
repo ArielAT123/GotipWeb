@@ -1,6 +1,6 @@
 const About = () => {
     return (
-      <div className="bg-white shadow rounded p-4">
+      <div className="bg-white shadow rounded-2xl p-4">
         <h5 className="text-lg font-semibold mb-3">About</h5>
         <p className="text-sm text-gray-600">
           He moonlights difficult engrossed it, sportsmen. Interested has all Devonshire difficulty gay assistance joy.

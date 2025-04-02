@@ -15,7 +15,7 @@ export default function MyPhotos() {
     <div className="bg-white rounded-xl shadow p-4">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-lg font-semibold">Mis Fotos</h2>
-        <a href="/gallery" className="text-blue-600 text-sm hover:underline">Ver todas</a>
+        <a href="/gallery" className="text-blue-600 text-sm bg-blue-100 text-blue-600 text-base w-6 h-6 rounded flex items-center justify-center font-bold leading-none hover:bg-blue-200 transition ">Ver todas</a>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
         {fotos.map((foto, idx) => (

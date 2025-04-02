@@ -1,14 +1,4 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/albums/page": "app/albums/page.js",
-  "/blog/page": "app/blog/page.js",
-  "/blogDetails/page": "app/blogDetails/page.js",
-  "/clientes/page": "app/clientes/page.js",
-  "/dashboard/page": "app/dashboard/page.js",
-  "/event3/page": "app/event3/page.js",
-  "/events/page": "app/events/page.js",
-  "/events2/page": "app/events2/page.js",
-  "/my-profile/page": "app/my-profile/page.js",
-  "/productos-cliente/page": "app/productos-cliente/page.js",
-  "/profile/page": "app/profile/page.js"
+  "/my-profile/page": "app/my-profile/page.js"
 }
