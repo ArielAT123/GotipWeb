@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/albums/PhotoTabs.css"],"sourcesContent":[".photo-tabs {\r\n    border-bottom: 1px solid var(--border);\r\n  }\r\n  \r\n  .photo-tab {\r\n    padding: 0.75rem 1.25rem;\r\n    color: var(--text-gray);\r\n    font-weight: 500;\r\n    border: none;\r\n    background: none;\r\n    position: relative;\r\n    cursor: pointer;\r\n  }\r\n  \r\n  .photo-tab::after {\r\n    content: '';\r\n    position: absolute;\r\n    bottom: 0;\r\n    left: 0;\r\n    width: 0;\r\n    height: 3px;\r\n    background-color: var(--primary);\r\n    transition: var(--transition);\r\n  }\r\n  \r\n  .photo-tab.active {\r\n    color: var(--primary);\r\n  }\r\n  \r\n  .photo-tab.active::after {\r\n    width: 100%;\r\n  }\r\n  \r\n  .photo-tab:hover:not(.active) {\r\n    color: var(--text-dark);\r\n  }"],"names":[],"mappings":"AAAA;;;;AAIE;;;;;;;;;;AAUA;;;;;;;;;;;AAWA;;;;AAIA;;;;AAIA"}}]
+}

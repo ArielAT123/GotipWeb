@@ -1,0 +1,42 @@
+/* [project]/src/app/albums/page.module.css [app-client] (css) */
+.page-module__iha6lW__addPhotoCard {
+  min-height: 150px;
+  background-color: #f8f9fa;
+  transition: all .3s;
+}
+
+.page-module__iha6lW__addPhotoCard:hover {
+  background-color: #e9ecef;
+  border-color: #dee2e6 !important;
+}
+
+.page-module__iha6lW__photoCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: .5rem;
+}
+
+.page-module__iha6lW__photoCard img {
+  transition: transform .3s;
+}
+
+.page-module__iha6lW__photoCard:hover img {
+  transform: scale(1.05);
+}
+
+.page-module__iha6lW__photoActions {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.page-module__iha6lW__albumCard {
+  transition: all .3s;
+}
+
+.page-module__iha6lW__albumCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 .5rem 1rem #00000026;
+}
+
+/*# sourceMappingURL=src_app_albums_page_module_b52d8e88.css.map*/

@@ -1,0 +1,55 @@
+/* [project]/src/app/dashboard/page.module.css [app-client] (css) */
+:root {
+  --primary: #4361ee;
+  --primary-hover: #3a56d4;
+  --secondary: #06d6a0;
+  --accent: #7209b7;
+  --action: #f72585;
+  --bg-light: #f8f9fa;
+  --text-dark: #212529;
+  --text-gray: #6c757d;
+  --border: #dee2e6;
+  --card-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
+  --transition: all .3s cubic-bezier(.25, .8, .25, 1);
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  font-family: Segoe UI, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.page-module__Fx1_7W__businessContainer {
+  display: flex;
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  gap: 1.5rem;
+  padding: 0 1.5rem;
+}
+
+@keyframes page-module__Fx1_7W__fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-module__Fx1_7W__fadeIn {
+  animation: .5s ease-out forwards page-module__Fx1_7W__fadeIn;
+}
+
+.page-module__Fx1_7W__fadeInDelay1 {
+  animation-delay: .1s;
+}
+
+.page-module__Fx1_7W__fadeInDelay2 {
+  animation-delay: .2s;
+}
+
+/*# sourceMappingURL=src_app_dashboard_page_module_b52d8e88.css.map*/

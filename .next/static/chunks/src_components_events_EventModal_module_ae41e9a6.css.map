@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Tipi/Gotip/next/gotip-frontend/src/components/events/EventModal.module.css"],"sourcesContent":[".modal-backdrop {\r\n    position: fixed;\r\n    inset: 0;\r\n    background-color: rgba(0, 0, 0, 0.5);\r\n    z-index: 1050;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n  }\r\n  "],"names":[],"mappings":"AAAA","debugId":null}}]
+}

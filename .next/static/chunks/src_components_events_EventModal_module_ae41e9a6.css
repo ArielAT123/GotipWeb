@@ -1,0 +1,13 @@
+/* [project]/src/components/events/EventModal.module.css [app-client] (css) */
+.EventModal-module__NAmXLG__modal-backdrop {
+  z-index: 1050;
+  background-color: #00000080;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  inset: 0;
+}
+
+
+/*# sourceMappingURL=src_components_events_EventModal_module_ae41e9a6.css.map*/
