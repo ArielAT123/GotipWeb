@@ -1,0 +1,47 @@
+:root {
+    /* Colores principales */
+    --primary: #4361ee;
+    --primary-hover: #3a56d4;
+    --secondary: #06d6a0;
+    --accent: #7209b7;
+    --action: #f72585;
+    --danger: #ef233c;
+    --success: #4cc9f0;
+    
+    /* Escala de grises */
+    --white: #ffffff;
+    --light: #f8f9fa;
+    --gray-100: #e9ecef;
+    --gray-200: #dee2e6;
+    --gray-300: #ced4da;
+    --gray-400: #adb5bd;
+    --gray-500: #6c757d;
+    --gray-600: #495057;
+    --gray-700: #343a40;
+    --gray-800: #212529;
+    --gray-900: #1a1a1a;
+    --black: #000000;
+    
+    /* Sombras */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    
+    /* Bordes */
+    --border-radius-sm: 0.25rem;
+    --border-radius: 0.5rem;
+    --border-radius-lg: 0.75rem;
+    --border-radius-xl: 1rem;
+    
+    /* Transiciones */
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  /* Modo oscuro */
+  [data-theme="dark"] {
+    --bg-light: var(--gray-900);
+    --text-dark: var(--gray-100);
+    --text-gray: var(--gray-400);
+    --border: var(--gray-700);
+  }
