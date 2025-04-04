@@ -28,5 +28,6 @@ export interface Review {
     icon: string;
     label: string;
     active?: boolean;
+    route: string;
   }
   

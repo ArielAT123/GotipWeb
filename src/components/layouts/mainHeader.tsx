@@ -3,25 +3,32 @@ import React from 'react';
 import Image from 'next/image';
 import { NavItem } from '../../types/business';
 import withRouteExclusion from '../routeExclosion/routeExclusion';
-
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 function MainHeader() {
+  const pathname = usePathname();
+
   const navItems: NavItem[] = [
-    { icon: 'home', label: 'Inicio' },
-    { icon: 'network-wired', label: 'Mi red' },
-    { icon: 'store', label: 'Mi negocio', active: true },
-    { icon: 'envelope', label: 'Mensajes' },
-    { icon: 'bell', label: 'Notificaciones' },
+    { icon: 'home', label: 'Inicio', route: '/' },
+    { icon: 'network-wired', label: 'Mi red', route: '/network' },
+    { icon: 'store', label: 'Mi negocio', route: '/business' },
+    { icon: 'envelope', label: 'Mensajes', route: '/messages' },
+    { icon: 'bell', label: 'Notificaciones', route: '/notifications' },
   ];
+
+  const routeActive = pathname;
 
   return (
     <header className="bg-white border-b border-[#e5e7eb] sticky top-0 z-[1000] shadow-sm">
       <div className="header-container flex justify-between items-center max-w-[1200px] mx-auto px-6 h-16">
         {/* Logo */}
-        <div className="logo text-[1.75rem] font-extrabold flex items-center tracking-tight bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent transition duration-300 hover:scale-105 cursor-pointer">
-          <span>GO</span>
-          <span>tip</span>
-        </div>
+        <Link
+          href={'/'}
+          className="logo text-[1.75rem] font-extrabold flex items-center tracking-tight bg-gradient-to-r  bg-clip-text text-transparent transition duration-300 hover:scale-105 cursor-pointer text-decoration-none">
+          <span className="from-blue-600">GO</span>
+          <span className="text-orange-500">tip</span>
+        </Link>
 
         {/* Search bar */}
         <div className="search-bar flex-[0.6] mx-6 relative">
@@ -38,17 +45,28 @@ function MainHeader() {
         {/* Navigation icons */}
         <div className="nav-icons flex gap-1">
           {navItems.map((item, index) => (
-            <div
+            <Link
+              href={item.route}
               key={index}
-              className={`nav-icon flex flex-col items-center justify-center py-3 px-4 rounded-lg text-xs min-w-[70px] relative transition duration-300 cursor-pointer ${
-                item.active
-                  ? 'text-blue-600'
-                  : 'text-gray-500 hover:bg-blue-100 hover:text-blue-600'
+              className={`nav-icon flex flex-col items-center justify-center py-3 px-4 rounded-lg text-xs min-w-[70px] relative transition duration-300 cursor-pointer text-decoration-none ${
+                routeActive !== item.route &&
+                'text-gray-500 hover:bg-blue-100 hover:text-blue-600'
               }`}>
               <i
-                className={`fas fa-${item.icon} text-[1.25rem] mb-[0.3rem]`}></i>
-              <span>{item.label}</span>
-            </div>
+                className={`fas fa-${item.icon} text-[1.25rem] mb-[0.3rem] ${
+                  routeActive === item.route
+                    ? 'text-blue-600'
+                    : ' text-gray-500'
+                }`}></i>
+              <span
+                className={`${
+                  routeActive === item.route
+                    ? 'text-blue-600'
+                    : ' text-gray-500'
+                }`}>
+                {item.label}
+              </span>
+            </Link>
           ))}
         </div>
 
@@ -71,8 +89,4 @@ function MainHeader() {
 }
 
 // Usar el HOC para envolver MainHeader
-export default withRouteExclusion(MainHeader, [
-  '/login',
-  '/register'
-]);
-
+export default withRouteExclusion(MainHeader, ['/login', '/register']);
