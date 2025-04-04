@@ -1,4 +1,6 @@
-import { Album } from '../../types/album';
+'use client';
+
+import { Album } from '@/types/album';
 
 interface AlbumCardProps {
   album: Album;
@@ -6,36 +8,16 @@ interface AlbumCardProps {
 
 export default function AlbumCard({ album }: AlbumCardProps) {
   return (
-    <>
-      <a href="#">
-        <img className="rounded img-fluid" src={album.src} alt={album.title} />
-      </a>
-      
-      <div className="hstack mt-3">
-        <div>
-          <h6 className="mb-0"><a href="#!">{album.title}</a></h6>
-          <a className="text-secondary small" href="#!">{album.count} Items</a>
-        </div>
-        
-        <div className="dropdown ms-auto">
-          <button 
-            className="icon-sm bg-light text-secondary rounded-circle" 
-            id={`albumActionSetting${album.id}`} 
-            data-bs-toggle="dropdown" 
-            aria-expanded="false"
-          >
-            <i className="bi bi-three-dots"></i>
-          </button>
-          
-          <ul className="dropdown-menu dropdown-menu-end" aria-labelledby={`albumActionSetting${album.id}`}>
-            <li><button className="dropdown-item"><i className="bi bi-pencil fa-fw pe-1"></i> Edit</button></li>
-            <li><button className="dropdown-item"><i className="bi bi-download fa-fw pe-1"></i> Download</button></li>
-            <li><button className="dropdown-item"><i className="bi bi-trash fa-fw pe-1"></i> Delete</button></li>
-            <li><hr className="dropdown-divider" /></li>
-            <li><button className="dropdown-item"><i className="bi bi-flag fa-fw pe-1"></i> Report album</button></li>
-          </ul>
-        </div>
+    <div className="bg-white rounded-xl overflow-hidden shadow group hover:shadow-lg transition-all">
+      <img
+        src={album.src}
+        alt={album.title}
+        className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+      />
+      <div className="p-3">
+        <h5 className="text-sm font-semibold text-gray-800 mb-1">{album.title}</h5>
+        <p className="text-xs text-gray-500">{album.count} photos</p>
       </div>
-    </>
+    </div>
   );
 }

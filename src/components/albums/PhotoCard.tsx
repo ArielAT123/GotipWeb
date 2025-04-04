@@ -1,4 +1,6 @@
-import { Photo } from '../../types/photos';
+'use client';
+
+import { Photo } from '@/types/photos';
 
 interface PhotoCardProps {
   photo: Photo;
@@ -6,36 +8,21 @@ interface PhotoCardProps {
 
 export default function PhotoCard({ photo }: PhotoCardProps) {
   return (
-    <>
-      <div className="position-absolute bottom-0 end-0">
-        <div className="dropdown mb-2 me-3">
-          <button 
-            className="icon-sm bg-primary text-white rounded-circle" 
-            id={`photoActionEdit${photo.id}`} 
-            data-bs-toggle="dropdown" 
-            aria-expanded="false"
-          >
-            <i className="bi bi-pencil-fill"></i>
-          </button>
-          
-          <ul className="dropdown-menu dropdown-menu-end" aria-labelledby={`photoActionEdit${photo.id}`}>
-            <li><button className="dropdown-item"><i className="bi bi-tag fa-fw pe-1"></i> Remove Tag</button></li>
-            <li><button className="dropdown-item"><i className="bi bi-download fa-fw pe-1"></i> Download</button></li>
-            <li><button className="dropdown-item"><i className="bi bi-person fa-fw pe-1"></i> Make Profile Picture</button></li>
-            <li><button className="dropdown-item"><i className="bi bi-person-bounding-box fa-fw pe-1"></i> Make Cover Photo</button></li>
-            <li><hr className="dropdown-divider" /></li>
-            <li><button className="dropdown-item"><i className="bi bi-flag fa-fw pe-1"></i> Report photo</button></li>
-          </ul>
-        </div>
+    <div className="relative group overflow-hidden rounded-lg shadow hover:shadow-lg transition">
+      <img
+        src={photo.src}
+        alt={photo.alt}
+        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+      />
+
+      {/* Dropdown de acciones */}
+      <div className="absolute bottom-2 right-2">
+        <button
+          className="bg-blue-600 text-white rounded p-2 shadow-lg hover:bg-blue-700 transition"
+        >
+          <i className="fas fa-pencil-alt" />
+        </button>
       </div>
-      
-      <a href={photo.src} data-gallery="image-popup" data-glightbox="description: .custom-desc2; descPosition: left;">
-        <img className="rounded img-fluid" src={photo.src} alt={photo.alt} />
-      </a>
-      
-      <div className="glightbox-desc custom-desc2">
-        {/* Contenido del lightbox */}
-      </div>
-    </>
+    </div>
   );
 }
