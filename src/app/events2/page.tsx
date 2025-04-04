@@ -11,7 +11,6 @@ import DiscoverEventsPage from "@/components/events/DiscordEventPage";
 export default function EventsPage() {
   return (
     <>
-      <MainHeader />
       <main className="pt-4"> {/* Espaciado superior para separar del header */}
         <div className="container">
           <div className="row g-4">

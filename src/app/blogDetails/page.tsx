@@ -9,7 +9,6 @@ import BlogReplyForm from '../../components/blogDetails/BlogReplyForm';
 export default function BlogDetailsPage() {
   return (
     <>
-      <MainHeader />
       <main>
         <div className="container">
           <div className="row g-4">

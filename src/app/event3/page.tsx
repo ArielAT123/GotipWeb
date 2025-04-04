@@ -5,7 +5,6 @@ import DiscordEventPage from "@/components/events/DiscordEventPage";
 export default function EventsPage() {
   return (
     <>
-      <MainHeader />
       <main>
         <EventHeroFilter />
 

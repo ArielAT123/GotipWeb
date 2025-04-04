@@ -10,7 +10,6 @@ import EventLocationCard from '../../components/events/EventLocationCard';
 export default function MainLayout() {
   return (
     <>
-      <MainHeader />
       <main>
         <div className="container">
           <div className="row g-4">

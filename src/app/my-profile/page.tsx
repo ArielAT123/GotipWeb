@@ -9,7 +9,6 @@ import PostVisualizer from "@/components/myprofile/PostVisualizer";
 export default function ProfilePage() {
   return (
     <>
-      <MainHeader />
       <div className="p-4 bg-gray-100 min-h-screen">
         <div className="flex flex-col lg:flex-row gap-6 w-full">
           {/* Columna izquierda: PostVisualizer (30% del ancho) */}

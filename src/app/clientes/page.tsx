@@ -6,7 +6,6 @@ import Pagination from '../../components/clientes/Pagination';
 export default function Clientes() {
   return (
     <>
-      <MainHeader />
         <div className="flex max-w-[1200px] mx-auto px-6 py-10 gap-6">
         <Sidebar />
         <main className="flex-1">

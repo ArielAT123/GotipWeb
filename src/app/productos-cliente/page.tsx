@@ -8,7 +8,6 @@ import Pagination from '../../components/clientes/Pagination';
 export default function ProductoClientePage() {
   return (
     <>
-      <MainHeader />
       <main className="bg-[#F8FAFC] py-6 min-h-screen">
         <div className="container max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row gap-6">
           <FilterSidebar />

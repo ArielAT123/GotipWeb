@@ -44,7 +44,6 @@ export default function BlogPage() {
 
   return (
     <>
-      <MainHeader />
       <main className="container mx-auto px-4 mt-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Blog section */}
