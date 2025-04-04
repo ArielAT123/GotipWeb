@@ -51,7 +51,7 @@ const Experience: React.FC = () => {
         <div className="flex justify-center mt-2">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="text-blue-600 text-sm hover:text-blue-800"
+            className="text-blue-600 text-sm hover"
           >
             {showAll ? 'Show less ▲' : 'Show more ▼'}
           </button>

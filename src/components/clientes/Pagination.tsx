@@ -4,12 +4,12 @@ import { useState } from 'react';
 
 export default function Pagination() {
   const [activePage, setActivePage] = useState(1);
-
   const totalPages = 4;
 
   const goToPage = (page: number) => {
     if (page >= 1 && page <= totalPages) {
       setActivePage(page);
+      // Aquí puedes disparar fetch o filtrado, si lo necesitas
     }
   };
 
@@ -18,7 +18,12 @@ export default function Pagination() {
       {/* Botón anterior */}
       <button
         onClick={() => goToPage(activePage - 1)}
-        className="min-w-[36px] h-9 px-3 rounded-md border border-[var(--gray-light)] bg-white text-sm text-[var(--dark)] transition-all shadow-sm font-bold active:bg-[#fbbf24] active:text-white"
+        disabled={activePage === 1}
+        className={`min-w-[36px] h-9 px-3 rounded-md border bg-white text-sm font-bold transition-all shadow-sm ${
+          activePage === 1
+            ? 'text-gray-300 border-gray-200 cursor-not-allowed'
+            : 'text-gray-800 border-gray-300 hover:bg-yellow-400 hover:text-white'
+        }`}
         aria-label="Página anterior"
       >
         {'<'}
@@ -31,8 +36,8 @@ export default function Pagination() {
           onClick={() => goToPage(page)}
           className={`min-w-[36px] h-9 px-3 rounded-md border text-sm font-semibold transition-all shadow-sm ${
             activePage === page
-              ? 'bg-[#fbbf24] text-white border-[#fbbf24]'
-              : 'bg-white text-[var(--dark)] border-[var(--gray-light)] hover:bg-[#f59e0b] hover:text-white hover:border-[#f59e0b] hover:-translate-y-[2px]'
+              ? 'bg-yellow-400 text-white border-yellow-400'
+              : 'bg-white text-gray-800 border-gray-300 hover:bg-yellow-300 hover:text-white'
           }`}
         >
           {page}
@@ -42,7 +47,12 @@ export default function Pagination() {
       {/* Botón siguiente */}
       <button
         onClick={() => goToPage(activePage + 1)}
-        className="min-w-[36px] h-9 px-3 rounded-md border border-[var(--gray-light)] bg-white text-sm text-[var(--dark)] transition-all shadow-sm font-bold active:bg-[#fbbf24] active:text-white"
+        disabled={activePage === totalPages}
+        className={`min-w-[36px] h-9 px-3 rounded-md border bg-white text-sm font-bold transition-all shadow-sm ${
+          activePage === totalPages
+            ? 'text-gray-300 border-gray-200 cursor-not-allowed'
+            : 'text-gray-800 border-gray-300 hover:bg-yellow-400 hover:text-white'
+        }`}
         aria-label="Página siguiente"
       >
         {'>'}
