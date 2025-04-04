@@ -4,7 +4,7 @@ import withRouteExclusion from '../routeExclosion/routeExclusion';
 
 const Footer = () => {
   return (
-    <footer className="bg-amber-50 mt-10 py-6">
+    <footer className="bg-gray-50 mt-10 py-6">
       <p className="justify-center text-center">
         © {new Date().getFullYear()} GOtip ·{' '}
         <a
