@@ -9,6 +9,7 @@ import 'choices.js/public/assets/styles/choices.min.css';
 import BootstrapClient from '@/components/BootstrapClient';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import MainHeader from '@/components/layouts/mainHeader';
+import Footer from '@/components/layouts/footer';
 // import { usePathname } from 'next/navigation';
 
 const geistSans = Geist({
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <MainHeader />
         {children}
         <BootstrapClient />
+        <Footer />
       </body>
     </html>
   );
